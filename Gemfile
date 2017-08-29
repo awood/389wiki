@@ -17,6 +17,7 @@ gem 'nokogiri', "~> 1.5.2"
 gem 'stringex'
 gem 'rack'
 gem 'thin'
+gem 'puma'
 
 group :development do
   gem 'httparty'
