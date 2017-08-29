@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.0'
+ruby '2.2.2'
 
 # rack-jekyll fails to install under US_ASCII which is what the Jenkins
 # slaves are set to.
