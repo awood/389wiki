@@ -1,32 +1,20 @@
 source 'https://rubygems.org'
-ruby '2.2.2'
 
-# rack-jekyll fails to install under US_ASCII which is what the Jenkins
-# slaves are set to.
-Encoding.default_external=Encoding::UTF_8
-Encoding.default_internal=Encoding::UTF_8
-
-gem 'git', "~> 1.2"
-gem 'typogruby', "~> 1.0"
-gem 'jekyll', "~> 2.0"
+gem 'git'
+gem 'typogruby'
+gem 'jekyll'
 gem 'jekyll-paginate'
 gem 'jekyll-plantuml'
 gem 'jekyll-sitemap'
-gem 'kramdown', "~> 1.3"
-# Until https://github.com/adaoraul/rack-jekyll/pull/22 is accepted
-#gem 'rack-jekyll', :git => 'https://github.com/awood/rack-jekyll'
-gem 'rack-jekyll'
+gem 'kramdown'
+gem 'rack-jekyll', :git => 'https://github.com/awood/rack-jekyll'
 gem 'nokogiri'
+gem 'pygments.rb'
 gem 'stringex'
-gem 'rack', "=1.5.2"
+gem 'rack', "~> 2.0"
 gem 'rack-rewrite'
-gem 'thin'
+gem 'puma'
 
-group :development do
-  gem 'httparty'
-  gem 'thor'
-  gem 'safe_yaml'
-  gem 'rack-livereload'
-  gem 'guard-livereload'
+group :jekyll_plugins do
+  gem 'hawkins', "~> 2.0"
 end
-
